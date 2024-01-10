@@ -15,7 +15,7 @@ public class Loading : MonoBehaviour
 
         while (!loadLevel.isDone)
         {
-            _loadingBar.fillAmount = Mathf.Clamp01(loadLevel.progress /.70f);
+            _loadingBar.fillAmount = Mathf.Clamp01(loadLevel.progress /.9f);
             yield return null;
         }
     }
