@@ -21,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Move = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(speed * Move, rb.velocity.y);
+
+        rb.velocity = new Vector2(speed, rb.velocity.y);
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && isjumping == false)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
