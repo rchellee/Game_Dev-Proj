@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private float Move;
     public float jump;
-    public bool isjumping;
+    public bool isJumping;
 
 
     private Rigidbody2D rb;
@@ -23,17 +23,19 @@ public class PlayerMovement : MonoBehaviour
     {
 
         rb.velocity = new Vector2(speed, rb.velocity.y);
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && isjumping == false)
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && isJumping == false)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
+            isJumping = true;
         }
 
     }
-    private void onCollision(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
-            isjumping = false;
-
+        {
+            isJumping = false;
+        }
     }
 
 }
