@@ -4,32 +4,41 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float speed;
-    private float Move;
+    private float move;
     public float jump;
     public bool isJumping;
 
-
     private Rigidbody2D rb;
+    public float rotationSpeed = 5f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-
     void Update()
     {
-
+    
         rb.velocity = new Vector2(speed, rb.velocity.y);
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && isJumping == false)
+
+        if (Mathf.Abs(rb.velocity.x) > 0.1f)
+        {
+            RotateObjectAroundAxis();
+        }
+
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isJumping == false)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             isJumping = true;
         }
-
     }
+
+    private void RotateObjectAroundAxis()
+    {
+        transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime);
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
@@ -37,5 +46,4 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
         }
     }
-
 }
