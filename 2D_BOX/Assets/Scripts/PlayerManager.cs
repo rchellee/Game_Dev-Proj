@@ -23,6 +23,7 @@ public class PlayerManager : MonoBehaviour
         {
             gameOverScreen.SetActive(true);
             
+
         }
     }
     public void Replay()
