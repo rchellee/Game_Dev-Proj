@@ -1,12 +1,11 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-[Serializable]
+
+[System.Serializable]
 public class Character
 {
-   public GameObject prefab;
-   public string name;
-   public Sprite icon;
+   public Sprite characterSprite;
 
 }
