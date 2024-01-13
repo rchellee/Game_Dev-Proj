@@ -10868,6 +10868,7 @@ GameObject:
   - component: {fileID: 691157280}
   - component: {fileID: 691157284}
   - component: {fileID: 691157285}
+  - component: {fileID: 691157286}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -11044,6 +11045,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterDB: {fileID: 11400000, guid: 86e2bcfc140da7348a608637d99e6d04, type: 2}
   artworkSprite: {fileID: 691157282}
+--- !u!114 &691157286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691157279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbea7a431e1868d45ba69274d9446196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &695855398
 GameObject:
   m_ObjectHideFlags: 0
