@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Loading : MonoBehaviour
 {
     [SerializeField]
-    Image _loadingBar;
+    Image _loadingBar; 
 
     IEnumerator LoadNextLevel()
     {
