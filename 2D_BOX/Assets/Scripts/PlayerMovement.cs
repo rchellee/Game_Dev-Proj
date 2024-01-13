@@ -6,12 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
-    
+    private float Move;
+    private float move;
     public float jump;
     public bool isJumping;
-    private float boostTimer;
-    private float speedboost;
-    private bool boosting;
 
 
     private Rigidbody2D rb;
@@ -20,8 +18,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        boosting = false;
-        boostTimer = 0;
     }
 
     // Update is called once per frame
@@ -42,24 +38,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             isJumping = true;
-        }
-        if(boosting)
-        {
-            boostTimer += Time.deltaTime;
-            if(boostTimer>=10)
-            {
-                speedboost = 15;
-                boostTimer = 0;
-                boosting = false;
-            }
-        }
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag=="SpeedBoost")
-        {
-            boosting = true;
-            speedboost = 20;
         }
     }
 
