@@ -31,4 +31,12 @@ public class PlayerManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    public void menu(){
+        SceneManager.LoadScene("Menu");
+    }
+    public void quit()
+    {
+        Application.Quit();
+        Debug.Log("exit");
+    }
 }
