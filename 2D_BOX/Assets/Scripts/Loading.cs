@@ -24,6 +24,7 @@ public class Loading : MonoBehaviour
             _loadingBar.fillAmount = progressValue;
             yield return null;
         }
+        yield return new WaitForSeconds(delay);
     }
 
 }
