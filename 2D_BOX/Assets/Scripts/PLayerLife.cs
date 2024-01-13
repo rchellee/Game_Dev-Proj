@@ -1,23 +1,24 @@
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PLayerLife : MonoBehaviour
 {
-    public int Respawn;
+
 
     // Start is called before the first frame update
-    void Update(){
 
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Player"))
+        // Check if the collision is with an obstacle
+        if (collision.transform.tag == "Obstacle")
         {
-            SceneManager.LoadScene(Respawn);
+
+            PlayerManager.isGameOver = true;
+            gameObject.SetActive(false);
+
+            // You can add more logic here, such as game over screen or effects
         }
     }
-
 }
