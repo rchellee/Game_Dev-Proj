@@ -1,43 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float speed;
-    private float Move;
-    private float move;
-    public float jump;
-    public bool isJumping;
-
+    public float maxSpeed;
+    public float jumpForce;
+    public float gravityScale = 2.5f; // Adjust this value for the strength of gravity
 
     private Rigidbody2D rb;
-    public float rotationSpeed = 5f;
+    public float rotationSpeed;
+    private bool isJumping;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = gravityScale;
     }
-
-    // Update is called once per frame
 
     void Update()
     {
-
+        if (speed < maxSpeed)
+            speed += 0.1f * Time.deltaTime;
 
         rb.velocity = new Vector2(speed, rb.velocity.y);
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && isJumping == false)
 
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && !isJumping)
+        {
             if (Mathf.Abs(rb.velocity.x) > 0.1f)
             {
                 RotateObjectAroundAxis();
             }
 
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isJumping == false)
-        {
-            rb.AddForce(new Vector2(rb.velocity.x, jump));
-            isJumping = true;
+            Jump();
         }
     }
 
@@ -49,8 +43,14 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
-
+        {
             isJumping = false;
-}
+        }
     }
 
+    private void Jump()
+    {
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        isJumping = true;
+    }
+}

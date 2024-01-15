@@ -6,11 +6,13 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public static bool isGameOver;
+    
     public GameObject gameOverScreen;
 
     private void Awake()
     {
         isGameOver = false;
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class PlayerManager : MonoBehaviour
             gameOverScreen.SetActive(true);
 
         }
+       
     }
     public void Replay()
     {
