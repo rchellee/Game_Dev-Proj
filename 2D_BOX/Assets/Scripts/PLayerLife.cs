@@ -17,6 +17,7 @@ public class PLayerLife : MonoBehaviour
 
             // Play the death sound effect
             AudioSource.PlayClipAtPoint(deathSound, transform.position);
+            Time.timeScale = 0;
 
             // You can add more logic here, such as game over screen or effects
         }

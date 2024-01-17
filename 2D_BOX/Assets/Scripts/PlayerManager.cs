@@ -33,6 +33,7 @@ public class PlayerManager : MonoBehaviour
     public void Replay()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
     public void menu(){
         SceneManager.LoadScene("Menu");
