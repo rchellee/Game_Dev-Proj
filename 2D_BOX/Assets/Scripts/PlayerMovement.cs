@@ -11,10 +11,16 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed;
     private bool isJumping;
 
+    public AudioClip jumpSound; // Declare the audio clip for jump
+    private AudioSource audioSource; // Reference to the AudioSource component
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = gravityScale;
+
+        // Get the AudioSource component attached to the same GameObject
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -24,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(speed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && !isJumping)
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !isJumping)
         {
             if (Mathf.Abs(rb.velocity.x) > 0.1f)
             {
@@ -32,6 +38,12 @@ public class PlayerMovement : MonoBehaviour
             }
 
             Jump();
+
+            // Play the jump sound effect
+            if (jumpSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(jumpSound);
+            }
         }
     }
 
