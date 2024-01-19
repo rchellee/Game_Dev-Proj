@@ -6,39 +6,40 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public static bool isGameOver;
-    
     public GameObject gameOverScreen;
+    public Timer timerScript; // Reference to your Timer script
 
     private void Awake()
     {
         isGameOver = false;
-        
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isGameOver)
         {
             gameOverScreen.SetActive(true);
 
+            // Display the final time on game over screen
+            if (timerScript != null)
+            {
+                timerScript.DisplayFinalTime();
+            }
         }
-       
     }
+
     public void Replay()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
-    public void menu(){
+
+    public void Menu()
+    {
         SceneManager.LoadScene("Menu");
     }
-    public void quit()
+
+    public void Quit()
     {
         Application.Quit();
         Debug.Log("exit");

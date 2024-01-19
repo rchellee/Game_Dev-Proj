@@ -15,6 +15,12 @@ public class Timer : MonoBehaviour
         int minutes = Mathf.FloorToInt(elapsedTime / 60);
         int seconds = Mathf.FloorToInt(elapsedTime % 60);
         timerText.text = string.Format("{00:00}:{01:00}", minutes, seconds);
+    }
 
+    // New method to display the final time
+    public void DisplayFinalTime()
+    {
+        // Do any additional formatting if needed
+        Debug.Log("Final Time: " + timerText.text);
     }
 }
