@@ -22146,7 +22146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -60, y: -263}
+  m_AnchoredPosition: {x: -66, y: -161}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1157874227
@@ -35111,6 +35111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 1108766579}
+  timerScript: {fileID: 1535748210}
 --- !u!82 &1868850131
 AudioSource:
   m_ObjectHideFlags: 0

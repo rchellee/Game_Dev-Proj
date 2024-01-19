@@ -20,7 +20,6 @@ public class Timer : MonoBehaviour
     // New method to display the final time
     public void DisplayFinalTime()
     {
-        // Do any additional formatting if needed
         Debug.Log("Final Time: " + timerText.text);
     }
 }
