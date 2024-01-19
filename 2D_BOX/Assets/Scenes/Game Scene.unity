@@ -9616,7 +9616,7 @@ GameObject:
   - component: {fileID: 472372059}
   - component: {fileID: 472372058}
   m_Layer: 0
-  m_Name: Button
+  m_Name: PlayAgain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9761,7 +9761,7 @@ GameObject:
   - component: {fileID: 476952067}
   - component: {fileID: 476952066}
   m_Layer: 0
-  m_Name: Button (2)
+  m_Name: exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40421,7 +40421,7 @@ GameObject:
   - component: {fileID: 2108027031}
   - component: {fileID: 2108027030}
   m_Layer: 0
-  m_Name: Button (1)
+  m_Name: mainmenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40493,7 +40493,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1868850130}
         m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: menu
+        m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
