@@ -63,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        rb.AddTorque(rotationSpeed, ForceMode2D.Impulse); // Apply torque force for rotation
         isJumping = true;
     }
 }
