@@ -29502,11 +29502,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00adda6e275512642ad93914d5ddd7b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 5
   maxSpeed: 40
   jumpForce: 13
   gravityScale: 2.5
-  rotationSpeed: 10
+  rotationSpeed: 0
   jumpSound: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
 --- !u!114 &691157285
 MonoBehaviour:
