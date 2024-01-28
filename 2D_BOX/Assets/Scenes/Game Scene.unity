@@ -23414,13 +23414,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -29504,7 +29506,7 @@ MonoBehaviour:
   jumpForce: 13
   gravityScale: 2.5
   rotationSpeed: 10
-  jumpSound: {fileID: 8300000, guid: dc6614beca09347ec9b258f12d154bdd, type: 3}
+  jumpSound: {fileID: 8300000, guid: d9f6ebb2ccf58e7498a3beb5823a0765, type: 3}
 --- !u!114 &691157285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29531,7 +29533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbea7a431e1868d45ba69274d9446196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathSound: {fileID: 8300000, guid: dc6614beca09347ec9b258f12d154bdd, type: 3}
+  deathSound: {fileID: 8300000, guid: 1a57ab4f0999bbb43ab487b38fbf9a88, type: 3}
 --- !u!114 &691157288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34767,6 +34769,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a80f6f1af9cac0409244c4fae915b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementParticles: {fileID: 0}
+  occurAfterVelocity: 0
+  dustFormationPeriod: 0
+  playerRb: {fileID: 0}
 --- !u!1 &828141004
 GameObject:
   m_ObjectHideFlags: 0
@@ -77054,13 +77060,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
