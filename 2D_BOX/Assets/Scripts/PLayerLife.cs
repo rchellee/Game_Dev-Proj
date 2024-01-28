@@ -1,11 +1,10 @@
-using UnityEngine.SceneManagement;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PLayerLife : MonoBehaviour
 {
-    public AudioClip deathSound; // Add this line to declare the audio clip
+    public AudioClip deathSound; // Add this line to declare the death sound effect
+    public AudioSource backgroundMusicSource; // Reference to the AudioSource for background music
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,9 +16,16 @@ public class PLayerLife : MonoBehaviour
 
             // Play the death sound effect
             AudioSource.PlayClipAtPoint(deathSound, transform.position);
+
+            // Stop the background music
+            if (backgroundMusicSource != null)
+            {
+                backgroundMusicSource.Stop();
+            }
+
             Time.timeScale = 0;
 
-            // You can add more logic here, such as game over screen or effects
+            
         }
     }
 }
