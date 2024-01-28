@@ -6,16 +6,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] AudioSource backgroundMusic;
 
-    private bool isPaused = true;
-
-    private void Start()
-    {
-        // Optionally, you can also call Pause() here to show the pause menu at the start
-        if (isPaused)
-        {
-            Pause();
-        }
-    }
+    private bool isPaused = false;
 
     private void Update()
     {
@@ -30,6 +21,14 @@ public class PauseMenu : MonoBehaviour
             {
                 Pause();
             }
+        }
+    }
+
+    public void OpenPauseMenu()
+    {
+        if (!isPaused)
+        {
+            Pause();
         }
     }
 
