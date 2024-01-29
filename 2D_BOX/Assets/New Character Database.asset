@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: New Character Database
   m_EditorClassIdentifier: 
   character:
-  - characterSprite: {fileID: 21300000, guid: 04d9811b8dbfc424695b4b4e5995cdec, type: 3}
-  - characterSprite: {fileID: 21300000, guid: 628766e7400499843a87d1cf76a63594, type: 3}
-  - characterSprite: {fileID: 21300000, guid: 81c99926843cc924390645422bb960cc, type: 3}
+  - characterSprite: {fileID: 21300000, guid: 962ca5d04d9a06144bc06f12939137e9, type: 3}
+  - characterSprite: {fileID: 21300000, guid: 9e20266951ae4f845b385c77e22b369d, type: 3}
+  - characterSprite: {fileID: 21300000, guid: 37eb60fc7daea9a4096452784fd01853, type: 3}
+  - characterSprite: {fileID: 21300000, guid: 23a10e95029a3b841846051fb368336a, type: 3}
+  - characterSprite: {fileID: 21300000, guid: 7a61d840bd0fea14689830e55a78d7e2, type: 3}
+  - characterSprite: {fileID: 21300000, guid: 4e0e237b9e6aea94eafcce7fb22b27a5, type: 3}
