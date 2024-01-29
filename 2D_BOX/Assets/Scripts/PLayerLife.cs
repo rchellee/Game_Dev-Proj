@@ -24,8 +24,24 @@ public class PLayerLife : MonoBehaviour
             }
 
             Time.timeScale = 0;
+        }
+        // Check if the collision is with a flag
+        if (collision.transform.tag == "Flag")
+        {
+            PlayerManager.CompleteLevel = true;
+            gameObject.SetActive(false);
 
-            
+            // Play the death sound effect
+            AudioSource.PlayClipAtPoint(deathSound, transform.position);
+
+            // Stop the background music
+            if (backgroundMusicSource != null)
+            {
+                backgroundMusicSource.Stop();
+            }
+
+            Time.timeScale = 0;
         }
     }
+
 }
