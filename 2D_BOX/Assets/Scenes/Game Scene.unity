@@ -29335,7 +29335,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &691157282
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34149,8 +34149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: -45.466324}
+  m_SizeDelta: {x: 200, y: 28.2387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817439154
 MonoBehaviour:
@@ -44747,8 +44747,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -216, y: 0}
-  m_SizeDelta: {x: -249.99998, y: 0}
+  m_AnchoredPosition: {x: 4.6999555, y: 2}
+  m_SizeDelta: {x: -4.5999107, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108766581
 MonoBehaviour:
@@ -53495,8 +53495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.4, y: 0.6}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -102.8466, y: 0.4534}
+  m_SizeDelta: {x: 46.3731, y: 43.653}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1345614948
 MonoBehaviour:
@@ -53518,7 +53518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c1c7c3950f4093b49b7ee6a0b63e5076, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
