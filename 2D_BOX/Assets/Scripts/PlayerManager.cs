@@ -30,7 +30,7 @@ public class PlayerManager : MonoBehaviour
             }
         }
 
-        if (PlayerManager.CompleteLevel)
+        if (CompleteLevel)
         {
             completeLevelScreen.SetActive(true);
             if (timerScript != null)
